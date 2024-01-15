@@ -8,11 +8,29 @@ const Assignment3 = () => {
         { name: 'Chips', value: 20 },
         { name: 'Onion', value: 30 },
         { name: 'Tomato', value: 30 },
-        // Add more items as needed
+        { name: 'Pepper', value: 20},
+        { name: 'Gobi', value: 15}
     ]);
 
     // Your code starts here
-    const totalValue = 0;
+
+    // const expensiveTask = useMemo(()=>{
+    //     let totalValue = 0;
+    //     items.forEach((item) =>{
+    //         totalValue += item.value; 
+    //     })
+    //     return totalValue;
+    // } ,[items])
+
+
+    // Using reduce function
+    const expensiveTask = useMemo(() => {
+        const task = items.reduce((accumulator, currentValue) => {
+            return accumulator + currentValue.value;
+        },0)
+        return task;
+    }, [items])
+
     // Your code ends here
     return (
         <div>
@@ -21,7 +39,7 @@ const Assignment3 = () => {
                     <li key={index}>{item.name} - Price: ${item.value}</li>
                 ))}
             </ul>
-            <p>Total Value: {totalValue}</p>
+            <p>Total Value: {expensiveTask}</p>
         </div>
     );
 };
