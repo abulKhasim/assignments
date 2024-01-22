@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+#container {
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    padding: 6.59vw;
+    gap: 50px;
+    flex-wrap: wrap;
+    background-color: #2F3437;
+}

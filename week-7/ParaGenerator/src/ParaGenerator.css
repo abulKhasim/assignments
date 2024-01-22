@@ -1,0 +1,31 @@
+h1 {
+  text-align: center;
+  padding-top: 10vw;
+  padding-bottom: 2vw;
+}
+
+#input-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+input {
+  width: 25vw;
+  padding: 0.6vw;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+button {
+  padding: 0.6vw;
+}
+
+p {
+  font-size: 1.5vw;
+  padding: 2vw 4vw;
+}
